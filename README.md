@@ -5,6 +5,7 @@ This repository contains a project, written in Python, that downloads, parses, a
 ### [Extracting & Parsing the Data](../master/latin_library/parse_data.py)
 
 The general steps that went into this phase of the project include the following:
+
 1. Download a set of inconsistently structured HTML files containing Latin text data
 2. Parse the meaningful Latin text "verses" out of these files an store them in a sqlite database
     * "verses" = sentences, lines, or paragraphs depending on the context
