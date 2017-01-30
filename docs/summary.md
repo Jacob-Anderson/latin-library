@@ -1,9 +1,13 @@
+# Summary
+
+Below is an in-depth summary of my approach to the various components of this project.
+
 ## Parsing
 
 In general, I parsed each collection by first creating a BeautifulSoup object out of the initial 
 'collection.html' page and extracting the 'title', 'author', and 'dates' values to be used throughout the collection.
 
-Next, I found all of the <a> tags on the initial page and extracted the 'link' values for each book from the href
+Next, I found all of the a tags on the initial page and extracted the 'link' values for each book from the href
 of each tag and an initial 'book' value from the content/string of each tag.
 
 After obtaining all links/books, I iterated over them, creating BeautifulSoup objects out of each book page. At this
@@ -69,7 +73,7 @@ passage value.
 
 #### link
 
-All link values were obtained from the href value of the appropriate <a> tag on the initial 'collection.html' page
+All link values were obtained from the href value of the appropriate a tag on the initial 'collection.html' page
 for each collection.
 
 
