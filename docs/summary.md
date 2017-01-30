@@ -13,7 +13,7 @@ passages while detecting chapters and keeping track of a verse number (more deta
 
 #### title
 
-For 3 of my collections (all but Silius), I extracted the string of the <title> tag from the initial 
+For 3 of my collections (all but Silius), I extracted the string of the title tag from the initial 
 'collection.html' page and used this value as the title throughout that collection. For the Silius
 collection, the content of this tag was slightly different from the others so for the sake of consistency
 I hard-coded the title to be 'Silius'.
@@ -21,7 +21,7 @@ I hard-coded the title to be 'Silius'.
 #### book
 
 As described above, I first took the string from the link to the book page to be the book field value. Then, 
-if a more descriptive value was found on the actual book page (in a <title> or <h1> tag usually), I extracted
+if a more descriptive value was found on the actual book page (in a title or h1 tag usually), I extracted
 this and updated the book value. In two special cases, the most descriptive, consistent value available was 
 'Liber x' where x is a number. Because I believe 'Liber' means 'Book' in Latin, I manually replaced it with a
 more descriptive, appropriate value (Liber III --> Punica III, for example).
@@ -47,8 +47,8 @@ of the author, right?).
 
 Some books (all in the Silius collection, for example) seemed to have a simple poem structure with no chapters.
 In these cases I used the value 'null' for chapters. In cases where chapters were present in my collections, 
-they were nearly always containing in a <b> tag, making them fairly easy to detect and extract. In one special 
-case (Silvae III, Statius collection), text that I believed to be a chapter name was not contained in a <b> tag,
+they were nearly always containing in a b tag, making them fairly easy to detect and extract. In one special 
+case (Silvae III, Statius collection), text that I believed to be a chapter name was not contained in a b tag,
 which I handled as a special case.
 
 #### verse
@@ -80,9 +80,9 @@ The books 'Orationum Reliquiae' and 'de Musica' required their own specific pars
 
 ### Special Parsing - Statius
 
-For the books 'Silvae II' and 'Silvae V', text following a <br> or <BR> tag was not placed on the next line. This was
+For the books 'Silvae II' and 'Silvae V', text following a br or BR tag was not placed on the next line. This was
 inconsistent with all other html files and caused problems with the way I was parsing. Instead of writing unique parsing
-code to handle these cases, I took the html text, inserted newline characters after each <br> and <BR> tag, and created
+code to handle these cases, I took the html text, inserted newline characters after each br and BR tag, and created
 a BeautifulSoup object from the edited/fixed string. This allowed me to parse these files in the same way as all others
 in this collection.
 
@@ -93,7 +93,7 @@ every other file in this collection.
 
 ### Special Parsing - Virgil
 
-For 8 books in this collection, I added newlines after <br> and <BR> tags as I did for some books in the Statius collection.
+For 8 books in this collection, I added newlines after br and BR tags as I did for some books in the Statius collection.
 The reasoning was the same as above.
 
 A special parsing case arose in the 'Ecloga' books where what I believe to be the names of the speaking character (I think
