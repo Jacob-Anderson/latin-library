@@ -20,10 +20,11 @@ This phase included the implementation of a simple command-line interface to giv
 3. Display a "Usage Chart" for a Latin term
 4. Display a "Usage Chart" for an English term
 
-When English terms are supplied by the user, a free translation API is used to translate the term to Latin. The dataset is then searched for that translated term.
+When English terms are supplied by the user, a [free translation API](http://mymemory.translated.net/doc/spec.php) is used to translate the term to Latin. The dataset is then searched for that translated term.
 
 A "Usage Chart" involves a simple matplotlib bar chart showing the frequency of the given term in each of the "books" of the dataset.
 
+***
 
 For a more detailed description of work that went into this project, see the included [summary doc](../master/docs/summary.md).
 
